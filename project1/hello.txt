@@ -1,1 +1,3 @@
-Hi, my name is Janav Sama and my GitHub username is *samajanav*
+```
+Hi, my name is Janav Sama and my Github user name is samajanav.
+```
