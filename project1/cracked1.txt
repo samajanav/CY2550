@@ -19,12 +19,5 @@ sanbenect:lighter2
 malcolm:player2
 fortinbras:professor2
 superti:driver!
-bigghappy:society84
-bottechvaci:children46
-lennox:reflection%
-rosaline:peRception9
-shortoeve:recepti0n
-balthasar:fing3r
-polonius:w@it3r
-guildenstern:iNsuranc3
-cornelius:janna123
+
+21 password hashes cracked, 29 left
