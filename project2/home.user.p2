@@ -1,0 +1,18 @@
+## Last Modified: Sun Oct 11 23:47:44 2026
+abi <abi/5.0>,
+include <tunables/global>
+/home/js/p2 {
+  include <abstractions/base>
+  network inet stream,
+  network inet6 stream,
+  /home/js/p2 mr,
+  /tmp/project2* rw,
+  @{HOME}/.proj2/** rw,
+  @{HOME}/template r,
+  /var/log/syslog r,
+  /etc/{fstab,crontab,resolv.conf,passwd,hosts,nsswitch.conf,host.conf,localtime} r,
+  /proc/{version,buddyinfo} r,
+  /run/systemd/resolve/stub-resolv.conf r,
+  /run/sshd.pid r,
+  /sys/devices/system/cpu/cpu0/power/control r,
+}

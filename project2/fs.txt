@@ -2,10 +2,10 @@ chmod 755 /bin/bash
 chmod 4755 /usr/bin/passwd
 chmod 755 /var/log
 chmod 644 /var/log/lastlog
-chown root:root /var/log/apt
-chown carol:carol /home/carol
+chown 0:0 /var/log/apt
+chown 1003:1003 /home/carol
 chmod 755 /home/carol
-chown dave:dave /home/dave
+chown 1002:1002 /home/dave
 chmod 644 /home/dave/.profile
 chmod 755 /usr/sbin/adduser
 chmod 755 /usr/bin/sha1sum
