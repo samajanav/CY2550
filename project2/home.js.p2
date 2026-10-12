@@ -1,0 +1,25 @@
+abi <abi/5.0>,
+include <tunables/global>
+
+/home/js/p2 {
+  /home/js/p2 mr,
+  /etc/ld.so.cache r,
+  /lib64/ld-linux-x86-64.so.2 mr,
+  /usr/lib/x86_64-linux-gnu/libc.so.6 mr,
+  @{HOME}/.proj2/ rw,
+  @{HOME}/.proj2/config rw,
+  /tmp/project* rw,
+  /var/log/syslog r,
+  /etc/fstab r,
+  /proc/version r,
+  /proc/stat r,
+  /proc/buddyinfo r,
+  /etc/crontab r,
+  /run/systemd/resolve/stub-resolv.conf r,
+  /etc/passwd r,
+  /etc/hosts r,
+  /home/js/template r,
+  /sys/devices/system/cpu/cpu0/power/control r,
+  /run/sshd.pid r,
+  network inet stream,
+}
