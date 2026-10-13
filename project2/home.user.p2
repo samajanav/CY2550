@@ -1,16 +1,16 @@
 abi <abi/5.0>,
 include <tunables/global>
-/home/GITNAME/p2 {
-  /home/GITNAME/p2 mr,
+/home/js/p2 {
+  /home/js/p2 mr,
   network inet stream,
-  /home/GITNAME/.proj2/ w,
-  /home/GITNAME/.proj2/config w,
+  /home/js/.proj2/ w,
+  /home/js/.proj2/config w,
   /tmp/project* rw,
   /etc/{fstab,crontab,passwd,hosts} r,
   /proc/{version,stat,buddyinfo} r,
   /var/log/syslog r,
   /run/systemd/resolve/stub-resolv.conf r,
   /run/sshd.pid r,
-  /home/GITNAME/template r,
+  /home/js/template r,
   /sys/devices/system/cpu/cpu0/power/control r,
 }
