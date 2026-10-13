@@ -3,11 +3,13 @@ chmod 4755 /bin/passwd
 chmod 755 /sbin/adduser
 chmod 755 /bin/sha1sum
 chmod 755 /bin/mkdir
-chmod 755 /usr/lib/x86_64-linux-gnu/security
-chown root:root /usr/lib/x86_64-linux-gnu/security
 chmod 755 /usr/local/bin
 chmod 755 /usr/local/share/ca-certificates
-chmod 755 /var/log
 chmod 664 /var/log/lastlog
-chmod 750 /home/carol
 chmod 644 /home/dave/.profile
+chmod 755 /usr/lib/x86_64-linux-gnu/security
+chown 0:0 /usr/lib/x86_64-linux-gnu/security
+chmod 775 /var/log
+chown 0:103 /var/log
+chmod 755 /home/carol
+chown 1003:1003 /home/carol
