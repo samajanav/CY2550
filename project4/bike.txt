@@ -1,6 +1,6 @@
-1:E 11 St & 2 Ave
-2:1938
-3:2014-10-06
-4:12
-5:Tuesday, Thursday
-6:E 10 St & Avenue A, E 9 St & Avenue C, 1 Ave & E 15 St, W 26 St & 8 Ave, Lafayette St & E 8 St
+1:E 11 St & Broadway
+2:1936
+3:2013-09-18
+4:82
+5:Wednesday, Monday
+6:MacDougal St & Washington Sq, Sullivan St & Washington Sq, Perry St & Bleecker St, W 11 St & 6 Ave, E 10 St & 5 Ave
