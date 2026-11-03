@@ -1,0 +1,8 @@
+Seminar statistics for sama.j
+
+  Statistic         Number  Mean     Median   Max
+  (1) Total         19      19.632   19       --
+  (2) On-campus     10      19.5     20       --
+  (3) Non-CS major  3       18       17       20
+
+Ages are whole numbers from 17 to 21. Means are rounded to 3 decimal places.
