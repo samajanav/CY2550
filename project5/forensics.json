@@ -1,11 +1,11 @@
 {
-  "incident_id": "CASEID",
+  "incident_id": "p5-samajanav-c64dfd57",
   "first": {
     "type": "upload",
     "artifact": "/var/www/html/uploads/zephyr-meadow-ashen-11.php",
     "time": "2026-11-02T13:10:36-05:00",
     "guard": "Apache p5-upload-guard.conf (FilesMatch .php$ Require all denied in /var/www/html/uploads)",
-    "evidence": "gcp:p5-GITHUBUSER-000007"
+    "evidence": "gcp:p5-samajanav-000007"
   },
   "second": {
     "type": "backup",
@@ -18,27 +18,27 @@
     "login_time": "2026-11-02T13:46:22-05:00",
     "account": "ops_b1fb26",
     "source": "203.0.113.13",
-    "stolen": "SSH private key ops_key from /var/www/html/backups/willow-onyx-copper.zip (credential for ops_b1fb26)",
-    "persistence": "/usr/local/bin/hfpc-maintenance.sh",
-    "persistence_command": "*/30 * * * * root /usr/local/bin/hfpc-maintenance.sh",
-    "modified": "/etc/crontab",
-    "evidence": "gcp:p5-GITHUBUSER-000027"
+    "stolen": "/etc/shadow",
+    "persistence": "/usr/local/bin/hfpc-backup.sh",
+    "persistence_command": "15 2 * * * root /usr/local/bin/hfpc-backup.sh",
+    "modified": "/var/www/html/config.php",
+    "evidence": "gcp:p5-samajanav-000027"
   },
   "deleted": {
-    "insert_id": "p5-GITHUBUSER-000027",
+    "insert_id": "p5-samajanav-000027",
     "event": "sshd[1025]: Accepted publickey for ops_b1fb26 from 203.0.113.13 port 42877 ssh2: ED25519 SHA256:QCNH/LfQzAr+TH/xJ97g2uaqXe9UHrk0ibavvmBfp6w",
     "why": "hide the attacker's first successful login (ops_b1fb26 from external IP 203.0.113.13, 25 seconds after the backup download); auth.log has a gap and a duplicated adjacent line (lines 11 and 12)"
   },
   "timeline": [
     "2026-11-02T13:10:36-05:00 | first | PHP webshell uploaded via POST /upload.php | /var/log/apache2/access.log:3",
     "2026-11-02T13:10:39-05:00 | first | execution attempt GET /uploads/zephyr-meadow-ashen-11.php returns 403 | /var/log/apache2/access.log:4",
-    "2026-11-02T13:10:39-05:00 | first | guard fires: Apache AH01797 client denied by server configuration | gcp:p5-GITHUBUSER-000007",
-    "2026-11-02T13:22:10-05:00 | first | happy runs sudo cat /etc/shadow | gcp:p5-GITHUBUSER-000014",
-    "2026-11-02T13:22:30-05:00 | first | happy runs sudo useradd hfpcuser | gcp:p5-GITHUBUSER-000015",
+    "2026-11-02T13:10:39-05:00 | first | guard fires: Apache AH01797 client denied by server configuration | gcp:p5-samajanav-000007",
+    "2026-11-02T13:22:10-05:00 | first | happy runs sudo cat /etc/shadow | gcp:p5-samajanav-000014",
+    "2026-11-02T13:22:30-05:00 | first | happy runs sudo useradd hfpcuser | gcp:p5-samajanav-000015",
     "2026-11-02T13:45:54-05:00 | second | sudo less line duplicated in local auth.log | /var/log/auth.log:12",
     "2026-11-02T13:45:57-05:00 | second | backup zip downloaded from 203.0.113.13 (HTTP 200) | /var/log/apache2/access.log:12",
     "2026-11-02T13:45:57-05:00 | second | zip contains SSH private key ops_key for ops_b1fb26 | /var/log/apache2/access.log:12",
-    "2026-11-02T13:46:22-05:00 | second | attacker logs in as ops_b1fb26 from 203.0.113.13 | gcp:p5-GITHUBUSER-000027",
-    "2026-11-02T13:46:22-05:00 | second | login line absent from local auth.log, recovered from vault | gcp:p5-GITHUBUSER-000027"
+    "2026-11-02T13:46:22-05:00 | second | attacker logs in as ops_b1fb26 from 203.0.113.13 | gcp:p5-samajanav-000027",
+    "2026-11-02T13:46:22-05:00 | second | login line absent from local auth.log, recovered from vault | gcp:p5-samajanav-000027"
   ]
 }
