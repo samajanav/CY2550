@@ -26,8 +26,8 @@
   },
   "deleted": {
     "insert_id": "p5-samajanav-000027",
-    "event": "sshd[1025]: Accepted publickey for ops_b1fb26 from 203.0.113.13 port 42877 ssh2: ED25519 SHA256:QCNH/LfQzAr+TH/xJ97g2uaqXe9UHrk0ibavvmBfp6w",
-    "why": "hide the attacker login (ssh as ops_b1fb26 from 203.0.113.13); auth.log has a gap and a duplicated adjacent line"
+    "event": "Nov  2 13:46:22 lab sshd[1025]: Accepted publickey for ops_b1fb26 from 203.0.113.13 port 42877 ssh2: ED25519 SHA256:QCNH/LfQzAr+TH/xJ97g2uaqXe9UHrk0ibavvmBfp6w",
+    "why": "hide the attackers first successful login: sshd accepted publickey for ops_b1fb26 from external IP 203.0.113.13 right after the backup download, using the stolen key; the cleanup left a gap in auth.log and a duplicated adjacent line (lines 11 and 12)"
   },
   "timeline": [
     "2026-11-02T13:10:36-05:00 | first | PHP webshell uploaded via POST /upload.php | /var/log/apache2/access.log:3",
