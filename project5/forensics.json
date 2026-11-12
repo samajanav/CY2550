@@ -20,7 +20,7 @@
     "source": "203.0.113.13",
     "stolen": "/var/www/html/config.php",
     "persistence": "/home/ops_b1fb26/.ssh/authorized_keys",
-    "persistence_command": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA5k92HKNnChNy8BG5X666VYp7WtVqHyYb+ST/mEwIF8 abhi@p5",
+    "persistence_command": "echo \"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA5k92HKNnChNy8BG5X666VYp7WtVqHyYb+ST/mEwIF8 abhi@p5 abhi@p5\" >> /home/ops_b1fb26/.ssh/authorized_keys",
     "modified": "/var/www/html/index.php",
     "evidence": "gcp:p5-samajanav-000027"
   },
