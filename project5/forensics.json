@@ -19,8 +19,8 @@
     "account": "ops_b1fb26",
     "source": "203.0.113.13",
     "stolen": "/var/www/html/config.php",
-    "persistence": "/var/spool/cron/crontabs/ops_b1fb26",
-    "persistence_command": "*/30 * * * * /usr/local/bin/hfpc-maintenance.sh",
+    "persistence": "/home/ops_b1fb26/.ssh/authorized_keys",
+    "persistence_command": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA5k92HKNnChNy8BG5X666VYp7WtVqHyYb+ST/mEwIF8 abhi@p5",
     "modified": "/var/www/html/index.php",
     "evidence": "gcp:p5-samajanav-000027"
   },
