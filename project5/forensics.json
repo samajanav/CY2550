@@ -19,15 +19,15 @@
     "account": "ops_b1fb26",
     "source": "203.0.113.13",
     "stolen": "/var/www/html/config.php",
-    "persistence": "/etc/passwd",
-    "persistence_command": "/usr/sbin/useradd -m -s /bin/bash hfpcuser",
+    "persistence": "/var/spool/cron/crontabs/ops_b1fb26",
+    "persistence_command": "*/30 * * * * /usr/local/bin/hfpc-maintenance.sh",
     "modified": "/var/www/html/index.php",
     "evidence": "gcp:p5-samajanav-000027"
   },
   "deleted": {
     "insert_id": "p5-samajanav-000027",
     "event": "sshd[1025]: Accepted publickey for ops_b1fb26 from 203.0.113.13 port 42877 ssh2: ED25519 SHA256:QCNH/LfQzAr+TH/xJ97g2uaqXe9UHrk0ibavvmBfp6w",
-    "why": "hide the attacker login: auth.log has a gap and a duplicated adjacent line"
+    "why": "hide the attacker login (ssh as ops_b1fb26 from 203.0.113.13); auth.log has a gap and a duplicated adjacent line"
   },
   "timeline": [
     "2026-11-02T13:10:36-05:00 | first | PHP webshell uploaded via POST /upload.php | /var/log/apache2/access.log:3",
