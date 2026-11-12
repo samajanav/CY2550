@@ -18,16 +18,16 @@
     "login_time": "2026-11-02T13:46:22-05:00",
     "account": "ops_b1fb26",
     "source": "203.0.113.13",
-    "stolen": "/etc/shadow",
-    "persistence": "/usr/local/bin/hfpc-backup.sh",
-    "persistence_command": "15 2 * * * root /usr/local/bin/hfpc-backup.sh",
-    "modified": "/var/www/html/config.php",
+    "stolen": "ops_key",
+    "persistence": "/usr/local/bin/hfpc-report.sh",
+    "persistence_command": "0 4 * * 0 root /usr/local/bin/hfpc-report.sh",
+    "modified": "/var/www/html/index.php",
     "evidence": "gcp:p5-samajanav-000027"
   },
   "deleted": {
     "insert_id": "p5-samajanav-000027",
-    "event": "sshd[1025]: Accepted publickey for ops_b1fb26 from 203.0.113.13 port 42877 ssh2: ED25519 SHA256:QCNH/LfQzAr+TH/xJ97g2uaqXe9UHrk0ibavvmBfp6w",
-    "why": "hide the attacker's first successful login (ops_b1fb26 from external IP 203.0.113.13, 25 seconds after the backup download); auth.log has a gap and a duplicated adjacent line (lines 11 and 12)"
+    "event": "Nov  2 13:46:22 lab sshd[1025]: Accepted publickey for ops_b1fb26 from 203.0.113.13 port 42877 ssh2: ED25519 SHA256:QCNH/LfQzAr+TH/xJ97g2uaqXe9UHrk0ibavvmBfp6w",
+    "why": "hide the attacker first successful SSH login (account ops_b1fb26 from external IP 203.0.113.13, 25 seconds after the backup download); auth.log has a gap and a duplicated adjacent line (lines 11 and 12) where this entry was removed"
   },
   "timeline": [
     "2026-11-02T13:10:36-05:00 | first | PHP webshell uploaded via POST /upload.php | /var/log/apache2/access.log:3",
